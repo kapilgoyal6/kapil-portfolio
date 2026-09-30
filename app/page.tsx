@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   ArrowUpRight,
@@ -195,25 +196,26 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className="hero-card"
+            className="hero-profile"
             initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.15 }}
           >
-            <div className="code-top"><span /><span /><span /></div>
-            <pre>{`const engineer = {
-  experience: "10+ years",
-  backend: ["Ruby", "Rails"],
-  frontend: ["React", "Next.js"],
-  cloud: ["AWS", "Azure"],
-  database: ["PostgreSQL", "Redis"],
-  ai: ["OpenAI", "Claude", "LLMs"],
-  focus: [
-    "Product Engineering",
-    "Scalability",
-    "Automation"
-  ]
-};`}</pre>
+            <div className="profile-ring">
+              <Image
+                src="/profile.png"
+                alt="Kapil Goyal"
+                width={520}
+                height={520}
+                priority
+                className="profile-photo"
+              />
+            </div>
+            <div className="profile-caption">
+              <strong>Kapil Goyal</strong>
+              <span>Senior Full Stack & AI Engineer</span>
+              <small>Ruby on Rails · React · Next.js · AI</small>
+            </div>
           </motion.div>
         </div>
       </section>
