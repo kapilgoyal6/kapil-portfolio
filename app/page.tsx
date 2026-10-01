@@ -21,6 +21,7 @@ import {
   X
 } from "lucide-react";
 import { useState } from "react";
+import ToptalBadge from "/components/ToptalBadge";
 
 const skills = [
   { name: "Ruby on Rails", icon: Code2 },
@@ -216,6 +217,7 @@ export default function Home() {
               <span>Senior Full Stack & AI Engineer</span>
               <small>Ruby on Rails · React · Next.js · AI</small>
             </div>
+            <ToptalBadge />
           </motion.div>
         </div>
       </section>
